@@ -9,7 +9,7 @@ cd my-app
 ng serve --open
 ```
 
-根目录 ./src/app/app.component.ts 在这里把title改为 我的第一个Angular App!
+根目录 ./src/app/app.component.ts 在这里把title改为 我的第一个Angular App! 浏览器会实时更新。
 ```
 import { Component } from '@angular/core';
 
@@ -22,3 +22,15 @@ export class AppComponent {
   title = '我的第一个Angular App!';
 }
 ```
+
+然后更改CSS文件 src/app/app.component.css
+```
+h1 {
+  color: #369;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 250%;
+}
+```
+
+都可以看到效果~~
+What's next?
