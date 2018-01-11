@@ -54,3 +54,73 @@ npm run update-webdriver   //安装Protractor所需要的驱动程序
   </body>
 </html>
 ```
+   
+### 1 - Static Template
+更改一些内容   
+```
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Google Phone Gallery</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="bower_components/angular/angular.js"></script>
+  </head>
+  <body>
+    <ul>
+      <li>
+        <span>Nexus S</span>
+        <p>
+          Fast just got faster with Nexus S.
+        </p>
+      </li>
+      <li>
+        <span>Motorola XOOM™ with Wi-Fi</span>
+        <p>
+          The Next, Next Generation tablet.
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>
+```     
+
+### 2 - AngularJS Templates  
+把页面动态化。为应用程序构造代码有很多方式。针对Angular应用，我们鼓励使用模块-视图-控制器(MVC)设计模式以解耦代码、分离关注点。考虑到这一点，我们使用小的Angular以及JavaScript为我们的应用添加模块、视图和控制器组件。  
+在Angular中，视图是模块透过HTML模板的映射。  
+我们添加了一个新指令ng-controller，它给元素标签<body>附加了一个PhoneListCtrl控制器。
+ 
+```  
+<body ng-controller="PhoneListController">
+
+  <ul>
+    <li ng-repeat="phone in phones">
+      <span>{{phone.name}}</span>
+      <p>{{phone.snippet}}</p>
+    </li>
+  </ul>
+
+</body>   
+```  
+我们用ngRepeat指令和两个Angular表达式替代硬编码的手机列表. 
+ 
+ ```
+ // app/app.js  Define the `phonecatApp` module
+var phonecatApp = angular.module('phonecatApp', []);
+
+// Define the `PhoneListController` controller on the `phonecatApp` module
+phonecatApp.controller('PhoneListController', function PhoneListController($scope) {
+  $scope.phones = [
+    {
+      name: 'Nexus S',
+      snippet: 'Fast just got faster with Nexus S.'
+    }, {
+      name: 'Motorola XOOM™ with Wi-Fi',
+      snippet: 'The Next, Next Generation tablet.'
+    }, {
+      name: 'MOTOROLA XOOM™',
+      snippet: 'The Next, Next Generation tablet.'
+    }
+  ];
+});
+```
