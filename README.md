@@ -33,4 +33,10 @@ h1 {
 ```
 
 都可以看到效果~~
-What's next?
+What's next? https://angular.io/tutorial
+
+分析文件结构：
+README.md 里面包含命令行语句的基本用法 https://github.com/angular/angular-cli    
+
+src文件夹为源文件：
+app/app.component.{ts,html,css,spec.ts}  超文本标记语言模板, 样式, 和单元测试
