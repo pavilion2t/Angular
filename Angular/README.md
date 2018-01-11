@@ -234,6 +234,25 @@ angular.module('phonecatApp', [
           <p>{{phone.snippet}}</p>
         </li>
       </ul>  
-```
+```    
 
+### 7 - XHR & Dependency Injection   
+
+```
+git checkout -f step-8
+Previous HEAD position was 9b1ee8f... step-7 XHR & Dependency Injection
+HEAD is now at baf5a9b... step-8 Templating Links & Images  
+```   
+使用Angular内建的服务 $http从服务器上取得更大的数据集。使用Angular的依赖性注入（DI）来为PhoneListCtrl控制器提供服务。   
+
+```
+    controller: ['$http', function PhoneListController($http) {
+      var self = this;
+      self.orderProp = 'age';
+
+      $http.get('phones/phones.json').then(function(response) {
+        self.phones = response.data;
+      });
+    }]
+```
 
