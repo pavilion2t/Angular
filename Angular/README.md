@@ -12,4 +12,7 @@ npm start  // 启动一个本地开发Web服务器
 npm test  // 启动Karma单元测试运行器
 npm run protractor  //运行Protractor端到端（E2E）测试
 npm run update-webdriver   //安装Protractor所需要的驱动程序    
-```
+```     
+
+打开http://localhost:8000 可以看到效果   
+
