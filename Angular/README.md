@@ -213,6 +213,27 @@ angular.module('phonecatApp', [
   </div>
 </div>    
 ```   
-添加了一个标准HTML<input>元素标记，并使用Angular的filter函数来处理repeat指令的输入。
+添加了一个标准HTML<input>元素标记，并使用Angular的filter函数来处理repeat指令的输入。    
+
+### 6 - Two-way Data Binding   
+数据双向绑定，添加按照日期和按照字母顺序排序。  
+```
+     <p>
+        Sort by:
+        <select ng-model="$ctrl.orderProp">
+          <option value="name">Alphabetical</option>
+          <option value="age">Newest</option>
+        </select>
+      </p>  
+```     
+
+```
+      <ul class="phones">
+        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query | orderBy:$ctrl.orderProp">
+          <span>{{phone.name}}</span>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>  
+```
 
 
