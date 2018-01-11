@@ -3,7 +3,23 @@ AngularJs为第一版。
 ```
 git clone --depth=14 https://github.com/angular/angular-phonecat.git
 ```
-该`--depth=14`的选项仅仅是告诉Git只拉下来最后的14次提交。这样使下载更小更快。     
+该`--depth=14`的选项仅仅是告诉Git只拉下来最后的14次提交。这样使下载更小更快。  
+中文版14，执行 git checkout -f step-0 时报错
+英文版16，执行结果为    
+```
+Note: checking out 'step-0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at b160462... step-0 Bootstrapping
+```
 
 ```
 cd angular-phonecat  // 把你当前的目录变成angular-phonecat。    
