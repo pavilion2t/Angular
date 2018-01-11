@@ -3,4 +3,13 @@ AngularJs为第一版。
 ```
 git clone --depth=14 https://github.com/angular/angular-phonecat.git
 ```
-该`--depth=14`的选项仅仅是告诉Git只拉下来最后的14次提交。这样使下载更小更快。
+该`--depth=14`的选项仅仅是告诉Git只拉下来最后的14次提交。这样使下载更小更快。     
+
+```
+cd angular-phonecat  // 把你当前的目录变成angular-phonecat。    
+npm install   // 这个命令读取了angular-phonecat的package.json文件，并把以下工具下载到node_modules目录中   
+npm start  // 启动一个本地开发Web服务器
+npm test  // 启动Karma单元测试运行器
+npm run protractor  //运行Protractor端到端（E2E）测试
+npm run update-webdriver   //安装Protractor所需要的驱动程序    
+```
