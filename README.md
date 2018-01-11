@@ -57,9 +57,22 @@ tsconfig.{app|spec}.json    TypeScript编译器的配置文件。
 src/文件夹是项目的根文件夹之一。  
 其它文件是用来帮助你构建、测试、维护、文档化和发布应用的。   
 它们放在根目录下，和src/平级。     
+```   
 e2e/  端到端测试，和应用是相互独立的，它只适用于测试你的应用而已，它拥有自己的tsconfig.json。  
 node_modules/   Node.js创建了这个文件夹，并且把package.json中列举的所有第三方模块都放在其中。  
-.angular-cli.json   Angular CLI的配置文件   
+.angular-cli.json   Angular CLI的配置文件        
+```    
+     
+     
+新建文件夹
+```
+ng generate component heroes
+  create src/app/heroes/heroes.component.css (0 bytes)
+  create src/app/heroes/heroes.component.html (25 bytes)
+  create src/app/heroes/heroes.component.spec.ts (628 bytes)
+  create src/app/heroes/heroes.component.ts (269 bytes)
+  update src/app/app.module.ts (398 bytes)   
+```
 
 
 
