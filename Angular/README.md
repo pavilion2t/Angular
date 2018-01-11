@@ -32,3 +32,25 @@ npm run update-webdriver   //安装Protractor所需要的驱动程序
 
 打开http://localhost:8000 可以看到效果   
 
+### 0 - Bootstrapping   
+```
+<!doctype html>
+
+// ng-app指令标记了AngularJS脚本的作用域，在<html>中添加ng-app属性即说明整个<html>都是AngularJS脚本作用域。
+//开发者也可以在局部使用ng-app指令，如<div ng-app>，则AngularJS脚本仅在该<div>中运行。
+<html lang="en" ng-app>  
+  <head>
+    <meta charset="utf-8">
+    <title>My HTML File</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    
+    // 这行代码载入angular.js脚本，当浏览器将整个HTML页面载入完毕后将会执行该angular.js脚本
+    // angular.js脚本运行后将会寻找含有ng-app指令的HTML标签，该标签即定义了AngularJS应用的作用域。
+    <script src="bower_components/angular/angular.js"></script>
+  </head>
+  <body>
+    // 双大括号绑定的表达式 绑定告诉AngularJS需要运算其中的表达式并将结果插入DOM中
+    <p>Nothing here {{'yet' + '!'}}</p>
+  </body>
+</html>
+```
