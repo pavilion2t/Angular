@@ -166,7 +166,7 @@ angular.module('phonecatApp', []);
 ```     
 
 ###   4 - Directory and File Organization   
-组织文件格式   
+不添加新功能，主要是组织文件格式，最后结果如下：   
 ```
 app/
   phone-list/
@@ -177,5 +177,14 @@ app/
   app.css
   app.module.js
   index.html  
-```  
+```     
+
+删除 app.js 然后新建 app.module.js   
+
+```
+angular.module('phonecatApp', [
+  // depends on the `phoneList` module
+  'phoneList'
+]);
+```
 
