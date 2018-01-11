@@ -188,3 +188,31 @@ angular.module('phonecatApp', [
 ]);
 ```
 
+### 5 - Filtering Repeaters  
+添加全文搜索功能，测试。 对控制器不作修改，修改app/phone-list/phone-list.template.html   
+```
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="$ctrl.query" />
+
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+
+      <ul class="phones">
+        <li ng-repeat="phone in $ctrl.phones | filter:$ctrl.query">
+          <span>{{phone.name}}</span>
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>    
+```   
+添加了一个标准HTML<input>元素标记，并使用Angular的filter函数来处理repeat指令的输入。
+
+
