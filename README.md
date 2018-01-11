@@ -43,15 +43,17 @@ src文件夹为源文件：
 ```
 app/app.component.{ts,html,css,spec.ts}  超文本标记语言模板, 样式, 和单元测试
 app/app.module.ts  根模块，告诉angular怎么组织应用。现在它只定义AppComponent，马上会增加更多。    
-assets/*   构建应用的时候可以批量复制的文件夹     
-environments/*   各个环境下的配置      
+assets/*   这个文件夹下可以放图片等任何东西，在构建应用时，它们全都会拷贝到发布包中。   
+environments/*   包括为各个目标环境准备的文件，它们导出了一些应用中要用到的配置变量  
 favicon.ico  小图标    
 index.html     
 main.ts  主入口   
-polyfills.ts   浏览器兼容问题  
+polyfills.ts   不同的浏览器对Web标准的支持程度也不同。 填充库能帮我们把这些不同点进行标准化。
 styles.css    全局样式  
 test.ts    单元测试   
-tsconfig.{app|spec}.json    配置文件    
-```
+tsconfig.{app|spec}.json    TypeScript编译器的配置文件。
+```     
+
+src/文件夹是项目的根文件夹之一。 其它文件是用来帮助你构建、测试、维护、文档化和发布应用的。它们放在根目录下，和src/平级。
 
 
