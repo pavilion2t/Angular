@@ -4,8 +4,8 @@ AngularJs为第一版。
 git clone --depth=14 https://github.com/angular/angular-phonecat.git
 ```
 该`--depth=14`的选项仅仅是告诉Git只拉下来最后的14次提交。这样使下载更小更快。  
-中文版14，执行 git checkout -f step-0 时报错
-英文版16，执行结果为    
+中文版14 后续没有更新，执行 git checkout -f step-0 时报错
+英文版16 没有问题，执行结果为    
 ```
 Note: checking out 'step-0'.
 
@@ -86,9 +86,9 @@ npm run update-webdriver   //安装Protractor所需要的驱动程序
 ```     
 
 ### 2 - AngularJS Templates  
-把页面动态化。为应用程序构造代码有很多方式。针对Angular应用，我们鼓励使用模块-视图-控制器(MVC)设计模式以解耦代码、分离关注点。考虑到这一点，我们使用小的Angular以及JavaScript为我们的应用添加模块、视图和控制器组件。  
+把页面动态化。为应用程序构造代码有很多方式，针对Angular应用，鼓励使用模块-视图-控制器(MVC)设计模式以解耦代码、分离关注点。考虑到这一点，我们使用小的Angular以及JavaScript为我们的应用添加模块、视图和控制器组件。  
 在Angular中，视图是模块透过HTML模板的映射。  
-我们添加了一个新指令ng-controller，它给元素标签<body>附加了一个PhoneListCtrl控制器。
+我们在body标签上添加一个新指令ng-controller，该指令将一个控制器类附加到视图，这是Angular实现MVC模式的关键地方。
  
 ```  
 <body ng-controller="PhoneListController">
@@ -102,13 +102,13 @@ npm run update-webdriver   //安装Protractor所需要的驱动程序
 
 </body>   
 ```  
-我们用ngRepeat指令和两个Angular表达式替代硬编码的手机列表. 
+我们用ngRepeat指令和两个Angular表达式替代硬编码的手机列表。
  
  ```
- // app/app.js  Define the `phonecatApp` module
+ // app/app.js  定义 `phonecatApp` 模块
 var phonecatApp = angular.module('phonecatApp', []);
 
-// Define the `PhoneListController` controller on the `phonecatApp` module
+// 定义 `PhoneListController` 控制器在 `phonecatApp` 模块上
 phonecatApp.controller('PhoneListController', function PhoneListController($scope) {
   $scope.phones = [
     {
