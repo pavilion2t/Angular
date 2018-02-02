@@ -64,5 +64,28 @@ myApp.controller('MyController', function MyController($scope, $http) {
   $http.get('data.json').then(function(response) {
     $scope.artist = response.data;
   });
-``` 
+```     
+
+### Basic Filter   
+* currency, number, date, lowercase, uppercase   
+* Use the | and : characters   
+
+```   
+// index.html     
+{{item.name | uppercase}}   
+{{item.shortname | lowercase }}    
+```    
+
+### Array management filters    
+* limitTo:qty:start   
+* filter:keyword   
+* orderBy:key:reverse     
+
+```   
+// index.html    
+<li ng-repeat="item in artists | limitTo:4:1">   
+<li ng-repeat="item in artists | filter: 'query' | orderBy: 'name'">  
+<li ng-repeat="item in artists | orderBy:'name':'reverse'">     
+
+
 
