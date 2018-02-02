@@ -48,7 +48,10 @@ myApp.controller('MyController', function MyController($scope) {
 ### Conditionals and loops   
 * ng-show, ng-hide  
 * ng-if   
-* ng-repeat     
+* ng-repeat       
+
+Ng-show and its sibling ng-hide toggle the appearance of the element by adding the CSS property "display: none". Ng-if, on the other hand, actually removes the element from the DOM when the condition is false and only adds the element back in once the condition turns true. Ng-show leaves everything in the DOM alive, and simply hidden from view. This means that all of the watch expressions are still there even though the user doesn't see the view at all.   
+
 
 ### Using the $http service to read a JSON file   
 * $http   
@@ -79,13 +82,17 @@ myApp.controller('MyController', function MyController($scope, $http) {
 ### Array management filters    
 * limitTo:qty:start   
 * filter:keyword   
-* orderBy:key:reverse     
+* orderBy: key:reverse     
 
 ```   
 // index.html    
 <li ng-repeat="item in artists | limitTo:4:1">   
 <li ng-repeat="item in artists | filter: 'query' | orderBy: 'name'">  
-<li ng-repeat="item in artists | orderBy:'name':'reverse'">     
+<li ng-repeat="item in artists | orderBy:'name':'reverse'">        
+```    
+
+### Routing and deep linking   
+
 
 
 
