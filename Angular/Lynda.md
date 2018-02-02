@@ -48,9 +48,13 @@ myApp.controller('MyController', function MyController($scope) {
 ### Conditionals and loops   
 * ng-show, ng-hide  
 * ng-if   
-* ng-repeat       
+* ng-repeat        
 
-Ng-show and its sibling ng-hide toggle the appearance of the element by adding the CSS property "display: none". Ng-if, on the other hand, actually removes the element from the DOM when the condition is false and only adds the element back in once the condition turns true. Ng-show leaves everything in the DOM alive, and simply hidden from view. This means that all of the watch expressions are still there even though the user doesn't see the view at all.   
+
+[Tips and Tricks](https://www.lynda.com/Angular-tutorials/One-time-binding/597030/611899-4.html)
+Ng-show and its sibling ng-hide toggle the appearance of the element by adding the CSS property "display: none". Ng-if, on the other hand, actually removes the element from the DOM when the condition is false and only adds the element back in once the condition turns true. Ng-show leaves everything in the DOM alive, and simply hidden from view. This means that all of the watch expressions are still there even though the user doesn't see the view at all.     
+
+The knee jerk reaction might be to avoid replacing the whole tasks list but instead update in place old existing tasks.
 
 
 ### Using the $http service to read a JSON file   
