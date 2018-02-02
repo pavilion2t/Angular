@@ -48,8 +48,21 @@ myApp.controller('MyController', function MyController($scope) {
 ### Conditionals and loops   
 * ng-show, ng-hide  
 * ng-if   
-* ng-repeat   
+* ng-repeat     
+
+### Using the $http service to read a JSON file   
+* $http   
+* Runs with a server   
+* Returns a promise   
 
 
+```  
+// app.js 
+var myApplication = angular.module('myApp', []);   
 
+myApp.controller('MyController', function MyController($scope, $http) {
+  $http.get('data.json').then(function(response) {
+    $scope.artist = response.data;
+  });
+``` 
 
