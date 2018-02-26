@@ -22,6 +22,40 @@
 * ng-src  
 * ng-href   
 
+### 表达式  
+* 可以进行数学运算、比较运算、布尔逻辑、位运算   
+* 引用数组和对象符号   
+
+### 区分UI和控制器的职责   
+有2种方法可以把控制器关联到DOM节点上：  
+* ng-controller  
+* router    
+
+### 利用$scope暴露模型数据  
+### 利用$watch监控数据模型的变化   
+
+### 使用模块组织依赖关系   
+* provider(name, Object OR constructor() ) // 可配置
+* factory(name, $get Function() ) // 不可配置     
+* service(name, constructor() ) // 不可配置    
+   
+  
+### 使用过滤器格式化数据  
+* currency/date/number/uppercase    
+
+### 使用路由和$location切换视图    
+* $route   
+
+### 与服务器交互   
+* $http   
+
+### 使用指令修改DOM   
+* directive()    
+* directiveFunction()     
+
+### 检验用户输入   
+* $valid
+
 
 
 
