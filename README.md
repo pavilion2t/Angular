@@ -6,7 +6,11 @@
 npm install -g @angular/cli
 ng new my-app
 cd my-app
-ng serve --open
+ng serve --open     
+
+update: Cannot find module '@angular-devkit/core'
+
+https://stackoverflow.com/questions/48394003/cannot-find-module-angular-devkit-core
 ```
 
 根目录 ./src/app/app.component.ts 在这里把title改为 我的第一个Angular App! 浏览器会实时更新。
