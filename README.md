@@ -81,6 +81,12 @@ ng generate component heroes
 * 数据双向绑定使用 ngModel directive    
 * 在 app.module.ts 里导入 FormsModule，理解声明的重要性    
 ```   
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+import { HeroesComponent } from './heroes/heroes.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -92,7 +98,9 @@ ng generate component heroes
   ],
   providers: [],
   bootstrap: [AppComponent]
-})   
+})
+export class AppModule { }
+  
 ```   
 
 
