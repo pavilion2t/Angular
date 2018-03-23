@@ -68,7 +68,7 @@ node_modules/   Node.js创建了这个文件夹，并且把package.json中列举
 ```    
      
      
-新建文件夹
+使用CLI新建文件夹
 ```
 ng generate component heroes
   create src/app/heroes/heroes.component.css (0 bytes)
@@ -76,7 +76,26 @@ ng generate component heroes
   create src/app/heroes/heroes.component.spec.ts (628 bytes)
   create src/app/heroes/heroes.component.ts (269 bytes)
   update src/app/app.module.ts (398 bytes)   
-```
+```    
+* UppercasePipe 可以对字母格式化--全部大写   
+* 数据双向绑定使用 ngModel directive    
+* 在 app.module.ts 里导入 FormsModule，理解声明的重要性    
+```   
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeroesComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})   
+```   
+
+
 
 
 
