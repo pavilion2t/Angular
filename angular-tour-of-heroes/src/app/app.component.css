@@ -1,0 +1,9 @@
+nav a {
+  text-decoration: none;
+  background-color: #d6ef51;
+  border-radius: 4px;
+}
+
+nav a:hover {
+  color: #039be5;
+}
